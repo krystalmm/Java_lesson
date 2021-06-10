@@ -6,8 +6,12 @@
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter04"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter05"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter06"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter07"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="If01"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="If02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Null01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Ready02"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Switch01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Variable01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Variable02"/>
     </category>
