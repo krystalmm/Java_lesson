@@ -1,0 +1,19 @@
+
+public class Human01 {
+//	メンバー変数
+	public String name;
+//	メンバー変数
+	public int age;
+	
+//	引数なしのコンストラクタ
+	public Human01() {
+		name = "田中";
+		age = 20;
+	}
+	
+//	引数２つのコンストラクタ
+	public Human01(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+}

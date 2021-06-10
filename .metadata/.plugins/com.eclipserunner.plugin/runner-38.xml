@@ -9,6 +9,12 @@
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter06"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter07"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter08"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter09"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ClassMethod01"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ClassMethod02"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ClassMethod03"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ClassMethod04"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ClassMethod05"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Continue01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="DoWhile01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="For01"/>
