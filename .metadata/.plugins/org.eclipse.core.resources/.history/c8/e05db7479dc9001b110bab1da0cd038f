@@ -1,0 +1,25 @@
+
+public class Chapter08 {
+	public static void main(String[] args) {
+//		while文
+		int num = 1;
+		while (num < 5) {
+			System.out.println(num * num);
+			num++;
+		}
+		
+//		通常for文
+		int[] array = { 1, 2, 3, 4 };
+		for (int num2 = array[0]; num2 <= array.length; num2++) {
+			System.out.println("For = " + num2);
+		}
+		
+//		拡張for文
+		for (int num3 : array) {
+			if (num3 % 2 == 0) {
+				continue;
+			}
+			System.out.println("拡張For = " + num3);
+		}
+	}
+}
