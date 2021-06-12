@@ -1,0 +1,11 @@
+package practice;
+
+public class CapsuleMan {
+	public String name;
+	public int age;
+	
+	public CapsuleMan(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+}
