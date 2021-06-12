@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <runner version="1.0.0">
     <category expanded="true" name="カテゴリーなし">
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Abstract01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Array01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Break01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Capsule01"/>
@@ -13,6 +14,7 @@
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter09"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter10"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter12"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter13"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ClassMethod01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ClassMethod02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ClassMethod03"/>
@@ -29,6 +31,8 @@
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="For02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="If01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="If02"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Interface01"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Interface02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Null01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Ready02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Recursive01"/>
