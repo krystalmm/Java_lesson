@@ -34,6 +34,7 @@
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Interface01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Interface02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Null01"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Polymorphism01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Ready02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Recursive01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Switch01"/>
