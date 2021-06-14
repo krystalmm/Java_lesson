@@ -15,6 +15,9 @@
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter10"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter12"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter13"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter15_1"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter15_2"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter15_3"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ClassMethod01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ClassMethod02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="ClassMethod03"/>
@@ -35,6 +38,7 @@
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Interface02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Null01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Polymorphism01"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Polymorphism02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Ready02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Recursive01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Switch01"/>
