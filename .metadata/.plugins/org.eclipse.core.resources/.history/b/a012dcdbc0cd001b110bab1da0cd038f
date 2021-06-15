@@ -1,0 +1,7 @@
+package practice;
+
+public class Chapter16 {
+	Human human = new Human();
+	Human.HumanLeg leg = human.new HumanLeg();
+	leg.kick();
+}
