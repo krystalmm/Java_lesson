@@ -15,6 +15,7 @@
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter10"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter12"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter13"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter14"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter15_1"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter15_2"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Chapter15_3"/>
@@ -34,6 +35,7 @@
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Extend01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="For01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="For02"/>
+        <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Genelix"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="If01"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="If02"/>
         <launchConfiguration bookmark="false" defaultLaunchMode="run" name="Interface01"/>
