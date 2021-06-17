@@ -1,8 +1,0 @@
-
-public class Chapter04 {
-
-	public static void main(String[] args) {
-		String name = "mana";
-		System.out.println(name);
-	}
-}

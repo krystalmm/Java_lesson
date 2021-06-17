@@ -1,8 +1,0 @@
-
-public class Chapter05 {
-
-	public static void main(String[] args) {
-		long long1 = 10L;
-		System.out.println(long1);
-	}
-}
