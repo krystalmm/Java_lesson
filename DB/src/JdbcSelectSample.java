@@ -129,5 +129,97 @@ public class JdbcSelectSample {
 	
 //	SQLのinsert文を使ってデータの登録を行う！(Connectionを作るところまではデータの抽出と同じ！)
 //	Class.forName("com.mysql.cj.jdbc.Driver");
+//	String url = "jdbc:mysql://localhost:3306/database01?user=user01&password=password01&useSSL=false";
+//	Connection connection = DriverManager.getConnection(url);
+	
+//	SQLの発行もPreparedStatementのプレースホルダを使ってパラメータを埋め込む！
+//	userテーブルにinsert into user (email, name) values ('aaa@aaa.aaa', '山田太郎')のようなinsert文を発行する場合、
+//	PreparedStatement statement = connection.prepareStatement("insert into user (email, name) values (?, ?)");
+//	上記のようにパラメータの部分を？（プレースホルダ）に置き換える！
+	
+//	パラメータを埋め込む処理も、抽出の時と同じように以下のようになる！
+//	statement.setString(1, "aaa@aaa.aaa");
+//	statement.setString(2, "山田太郎");
+	
+//	SQLの実行は　ResultSet resultSet = statement.executeQuery();ではなく、
+//	boolean result = statement.execute(); になる！！
+//	trueの場合、statement.getResultSet()でResultSetが取得できる！
+//	falseの場合、statement.getUpdateCount()で変更された行数が取得できる！
+	
+	
+//	実行結果が必要ない場合は、単に statement.execute();　としても構わない！
+	
+	
+//	まとめると、データの登録は以下のようになる！（例外処理やclose処理は別途行う必要がある！）
+//	PreparedStatement statement = connection.prepareStatement("insert into user (email, name) values (? , ?)");
+//	statement.setString(1, "bbb@bbb.bbb");
+//	statement.setString(2, "山田三郎");
+//	statement.execute();
+	
+	
+//	データの更新は以下のようになる！
+//	PreparedStatement statement = connection.prepareStatement("update user set email = ?, name = ? where id = ?");
+//	statement.setString(1, "bbb@bbb.bbb");
+//	statement.setString(2, "山田三郎");
+//	statement.setLong(3, 1L);
+//	statement.execute();
+	
+	
+//	データの削除の場合は以下のようになる！
+//	PreparedStatement statement = connection.prepareStatement("delete from user where id = ?");
+//	statement.setString(1, 1L);
+//	statement.execute();
+	
+	
+//	JDBCでの例外処理
+//	JDBC接続で発生する例外は、java.sql.SQLException！
+	
+//	データ取得処理の場合、
+//	try {
+////		データ所得処理
+//	} catch (SQLException e) {
+////		例外処理
+//	}
+	
+	
+//	データ登録処理の例外処理
+//	1レコードを更新するだけなら、データの抽出処理と同じ！
+//	try {
+////		データ更新処理
+//	} catch (SQLException e) {
+////		例外処理
+//	}
+	
+	
+//	1つの処理で2レコード以上を更新しなければならないケースは注意！！
+//	トランザクション、コミット、ロールバック
+//	片方が成功して、もう片方が失敗するような状況を防ぐために、データベースにはトランザクションという仕組みが用意されている！
+//	トランザクションとは、不可分な処理を実行する仕組み！（全ての処理が成功 or 全ての処理が失敗）
+	
+//	コミットとは、確定処理のことで、１つのトランザクション内で発行した全てのSQLの実行を確定する処理のこと！
+//	トランザクションを使う場合、SQLを実行しただけでは結果がデータベースに反映されないので、全てのSQLを実行したら必ずコミットする必要がある！
+	
+//	ロールバックとは、取り消し処理のことで、１つのトランザクション内で発行した全てのSQLの実行を取り消すことができる！
+//	１つ目のSQLが成功し、２つ目のSQLが失敗のような場合でも、ロールバックすることによって、１つ目のSQLで実行した更新処理もなかったことにできる！
+	
+	
+//	トランザクション処理の実装（手順だけ）
+//	Connection connection = null;
+//	
+//	try {
+////		コネクション取得処理
+//		connection = ...;
+//		
+////		1,自動コミットさせない設定
+//		connection.setAutoCommit(false);
+//		
+////		SQLを発行
+//		
+////		2.全てのSQLが成功したので、コミット処理
+//		connection.commit();
+//	} catch (Exception e) {
+////		3,例外が発生したのでロールバック処理
+//		connection.rollback();
+//	}
 	
 }
