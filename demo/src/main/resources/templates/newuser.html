@@ -7,7 +7,9 @@
 <body>
 	<!-- 名前とEmailの入力フォームを作成 -->
 	<!-- userFormとの紐付け -->
-	<form th:object="${userForm}">
+	<!-- ユーザー登録処理（registerUserメソッド）を呼び出すようにアクションとメソッドの設定 -->
+	<!-- th:actionではデータの送信先を指定！@{/newuser}は、/newuserへのリンクとなる！！ -->
+	<form th:object="${userForm}" th:action="@{/newuser}" th:method="post">
 		<table>
 			<tr>
 				<th>名前</th>
