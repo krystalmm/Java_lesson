@@ -15,6 +15,8 @@ import com.example.demo.data.entity.User;
 import org.springframework.ui.Model;
 // UserFormのimport
 import com.example.demo.form.UserForm;
+// PostMappingのimport
+import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class UserController {
@@ -50,6 +52,24 @@ public class UserController {
 		
 //		テンプレートは src/main/resources/templates/newuser.html とする！
 		return "newuser";
+	}
+	
+//	registerUserメソッドを追加！（ユーザー登録処理）
+//	HTTPメソッドはPOSTメソッドを受け付ける！
+	@PostMapping("/newuser")
+//	引数にUserFormを追加！（HTMLで入力されたnameやemailの値がセットされた状態で渡ってくる！）
+	public String registerUser(UserForm userForm) {
+//		UserFormの値をUserクラス(Entity)にセットする
+//		実際のデータベースの１レコードに対応するEntityはUserクラス！（UserFormクラスはidのフィールドがないため、そのままデータベースに保存できない！！）
+		User user = new User();
+		user.setName(userForm.getName());
+		user.setEmail(userForm.getEmail());
+		
+//		データベースに保存
+		userRepository.save(user);
+		
+//		ユーザー一覧画面へリダイレクト
+		return "redirect:/users";
 	}
 	
 }
