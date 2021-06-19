@@ -17,6 +17,10 @@ import org.springframework.ui.Model;
 import com.example.demo.form.UserForm;
 // PostMappingのimport
 import org.springframework.web.bind.annotation.PostMapping;
+// Validatedのimport
+import org.springframework.validation.annotation.Validated;
+// BindingResultのimport
+import org.springframework.validation.BindingResult;
 
 @Controller
 public class UserController {
@@ -58,7 +62,15 @@ public class UserController {
 //	HTTPメソッドはPOSTメソッドを受け付ける！
 	@PostMapping("/newuser")
 //	引数にUserFormを追加！（HTMLで入力されたnameやemailの値がセットされた状態で渡ってくる！）
-	public String registerUser(UserForm userForm) {
+//	引数のUserFormにValidatedアノテーションを追加！
+//	registerUserメソッドの引数にBindingResultクラスを追加し、UserFormクラスのフィールドに対するバリデーションの結果を保持する！
+	public String registerUser(@Validated UserForm userForm, BindingResult bindingResult) {
+//		バリデーションの結果、エラーがあるかどうかチェック（hasErrorsは１つでもバリデーションエラーがあればtrueを返す！）
+		if (bindingResult.hasErrors()) {
+//			エラーがある場合は、ユーザー登録画面を返す
+			return "newuser";
+		}
+		
 //		UserFormの値をUserクラス(Entity)にセットする
 //		実際のデータベースの１レコードに対応するEntityはUserクラス！（UserFormクラスはidのフィールドがないため、そのままデータベースに保存できない！！）
 		User user = new User();

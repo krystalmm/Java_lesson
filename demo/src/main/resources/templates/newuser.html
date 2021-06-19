@@ -14,12 +14,23 @@
 			<tr>
 				<th>名前</th>
 				<!-- userFormのnameフィールドとの紐付け -->
-				<td><input type="text" th:field="*{name}"></td>
+				<td>
+					<input type="text" th:field="*{name}">
+					<!-- バリデーションエラーメッセージ表示 -->
+					<!-- th:ifは指定した条件に当てはまったときだけこの<span>タグを表示する記法！ -->
+					<!-- #fieldsの中にバリデーションエラーの情報が入っており、hasErrors('name')では指定したnameフィールドにエラーがある場合にtrueを返す！ -->
+					<!-- th:errors="*{name}"では、nameフィールドのエラーを展開して<span>の内容として表示させる！ -->
+					<span th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></span>
+				</td>
 			</tr>
 			<tr>
 				<th>Email</th>
 				<!-- userFormのemailフィールドとの紐付け -->
-				<td><input type="text" th:field="*{email}"></td>
+				<td>
+					<input type="text" th:field="*{email}">
+					<!-- バリデーションエラーメッセージ表示 -->
+					<span th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
+				</td>
 			</tr>
 		</table>
 		<input type="submit" value="登録">
