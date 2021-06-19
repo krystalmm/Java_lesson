@@ -13,6 +13,8 @@ import java.util.List;
 import com.example.demo.data.entity.User;
 // Modelのimport
 import org.springframework.ui.Model;
+// UserFormのimport
+import com.example.demo.form.UserForm;
 
 @Controller
 public class UserController {
@@ -36,6 +38,18 @@ public class UserController {
 		
 //		テンプレートは src/main/resources/templates/users.html とする！
 		return "users";
+	}
+	
+//	getNewUserメソッドを追加！（ユーザー登録画面を返すメソッド）
+	@GetMapping("/newuser")
+//	引数にModelを追加
+	public String getNewUser(Model model) {
+//		Modelに空のUserFormを追加（HTMLテンプレートから値をセットするための設定！）
+		UserForm userForm = new UserForm();
+		model.addAttribute("userForm", userForm);
+		
+//		テンプレートは src/main/resources/templates/newuser.html とする！
+		return "newuser";
 	}
 	
 }
