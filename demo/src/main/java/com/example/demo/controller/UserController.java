@@ -21,6 +21,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.validation.annotation.Validated;
 // BindingResultのimport
 import org.springframework.validation.BindingResult;
+// DeleteMappingのimport
+import org.springframework.web.bind.annotation.DeleteMapping;
+// PathVariableのimport
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
 public class UserController {
@@ -79,6 +83,20 @@ public class UserController {
 		
 //		データベースに保存
 		userRepository.save(user);
+		
+//		ユーザー一覧画面へリダイレクト
+		return "redirect:/users";
+	}
+	
+	
+//	deleteUserメソッドを追加
+//	リクエストマッピング設定を追加（http://localhost:8080/users/{ユーザーID}に対してHTTPのDELETEメソッドで受け取る！）
+//	{id}のように{}で囲んだ部分はパスパラメータと呼び、可変の値が入ってくる！
+	@DeleteMapping("/users/{id}")
+//	処理の中でidを使えるように、引数にidを追加！@PathVariableはリクエストマッピングのパスパラメータの値を引数に紐付けるためのアノテーション！Entityの型に合わせてLong型で宣言！
+	public String deleteUser(@PathVariable Long id) {
+//		指定したIDのユーザーを削除
+		userRepository.deleteById(id);
 		
 //		ユーザー一覧画面へリダイレクト
 		return "redirect:/users";
