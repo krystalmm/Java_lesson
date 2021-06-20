@@ -43,5 +43,27 @@ class CalculatorTest {
 //		assertThatメソッドは、hamcrestというライブラリーのもの！
 		assertThat(result, is(4));
 	}
+	
+	
+//	rootメソッドに対するテストメソッド追加（正常な引数の時）
+	@Test
+	@DisplayName("4の平方根は2になる")
+	void testRoot4() {
+		Calculator calc = new Calculator();
+		double result = calc.root(4.0);
+		assertThat(result, is(2.0));
+	}
+	
+//	rootメソッドに対するテストメソッド追加（例外が発生した時）
+	@Test
+	@DisplayName("-1の平方根は例外が発生する")
+	void testRootException() {
+		Calculator calc = new Calculator();
+//		JUnitで例外の検証を行うためには、assertThrows()メソッドを使用する！
+//		第一引数は、テストの期待結果の例外クラスを指定する！
+//		第二引数は、テスト対象メソッドの実行をラムダ式で指定する！
+		assertThrows(IllegalArgumentException.class, () -> calc.root(-1));
+	}
+	
 
 }
